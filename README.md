@@ -1,2 +1,7 @@
 # begin
-akash, alekha and ajinkyaS boilerplate project
+just another repo for starting a boilerplate project
+---
+## Author
+    Akash
+    Alekha
+    Ajinkya
