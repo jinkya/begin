@@ -1,5 +1,5 @@
 # begin
-just another repo for starting a boilerplate project
+A boilerplate repo for Electron js chat App
 ---
 ## Author
     Akash
