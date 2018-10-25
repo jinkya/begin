@@ -1,3 +1,8 @@
+# Node.js the complete guide to build RESTful APIs
+
+	Udemy course by Mosh Hamideni
+	
+
 #### 01 Getting started
 What is Node?
 - An open source and cross platform runtime environment for executing javascript code outside of browser.
@@ -100,8 +105,79 @@ Order of occurrence is important.
 	// raised an event
 	emitter.emit('messageLogged',{ id: 1, url: 'http://a' });	// Making a signal with event argument.
 	
+Extending an event emitter
 
+logger.js
+
+    const EventEmitter = require('events');
+            
+    var url = "http://mylogger.io/log";
+	
+	class Logger extends EventEmitter {
+	log(message){
+		// send a HTTP request
+		console.log(message);
+		// Riase an event
+	    this.emit('messageLogged', { id: 1, url: 'https://abc.xyz/'})
+	}
+	}
+	
+	module.exports = Logger;
+
+
+app.js
+
+    const EventEmitter = require('events');
+    		
+	const Logger = require('./logger');
+	const logger = new Logger();
+	
+		// Register a Listener
+	logger.on('messageLogged', (arg)=>{
+		console.log('Listener called ',arg);
+	});
+
+
+	logger('message');
+	
+HTTP Module
+    
+    const http = require('http');
+	
+	const server = http.createServer((req, res)=>{
+		if (req.url === '/'){
+			res.wtite('Hello, Did you called me');
+			res.end();
+		}
+		
+		if(req.url === '/api/cources'){
+			res.write(JSON.stringify([1,2,3]));
+			res.end();
+		}
+	}); // an event emiiter type
+	
+	// server.on('connection', (socket)=>{
+	// 	console.log('new connection...');
+	// })
+	
+	server.listen(3000);
+	console.log('Listenning on port 3000...');
+	
+	
 #### 03 Node Package manager
+package manager for javascript.  
+npm and node are developed independently.  
+
+Creating a projects package.json
+- mkdir <project_name>
+- cd <project_name>
+- npm init _ provide the required details creates a package.json
+- skip it with npm init --yes
+
+Installing a node package
+    
+    npm i <package-name>
+
 #### 04 Building RESTful API using Express
 #### 05 Express Advanced Topics
 #### 06 Asynchrounous Javascript
@@ -114,3 +190,4 @@ Order of occurrence is important.
 #### 13 Integration Testing
 #### 14 Test-driven Development
 #### 15 Deployment
+
