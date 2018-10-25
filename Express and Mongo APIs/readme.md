@@ -53,6 +53,53 @@ Best practice - Make the imported as constant..
 
 
 Module wrapper function
+- At runtime node converts the module into something like
+		
+		(function (exports, require, module, __filename, __dirname){
+		...
+		})()
+actually a more complicated than this.
+
+Inbuilt modules
+
+Path module
+		
+		const path = require('path');
+		var pathObj = path.parse(__filename);
+		console.log(pathObj); // { root: ,dir,base,ext,name }
+
+OS module
+		
+		const os = require('os');
+		var totalMemory = os.totalmem();
+		var freeMemory = os.freemem();
+		console.log('Total Memory '+totalMemory); // mb
+		console.log(`Free Memory ${freeMemory}`);
+		
+File System Module
+It have syn and async method, prefer to use async methods.
+			
+		const fs = require('fs');
+		const files = fs.readdirSync('./');
+		console.log(files) // Array of files
+		fs.readdir('./', function(err, files)=>{
+			if(err) console.log(err);
+			else console.log('Result', files);
+		})
+		
+Events Module
+Order of occurrence is important.
+	const EventEmitter = require('events'); // EventEmitter is a class, container for properties and functions.
+	const emitter = new EventEmitter();	// object
+	
+	// register a listener
+	emitter.on('messageLogged', function(arg){	// e, eventArg
+		console.log(`Listener called...`, arg);
+	});
+	
+	// raised an event
+	emitter.emit('messageLogged',{ id: 1, url: 'http://a' });	// Making a signal with event argument.
+	
 
 #### 03 Node Package manager
 #### 04 Building RESTful API using Express
