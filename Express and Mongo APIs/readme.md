@@ -1,7 +1,22 @@
 # Node.js the complete guide to build RESTful APIs
 
-	Udemy course by Mosh Hamideni
+	15 hours Udemy course by Mosh Hamideni
 	
+#### Content
+- Getting started
+- Node Module System
+- Building RESTful APIs using Express
+- Express Advanced Topics
+- Asynchronous Javascript
+- CRUD Operations using MongoDB
+- Mongoose - Data validation
+- Mongoose - Modelling Relationships between Connected Data
+- Authentication and Authorisation
+- Handling and Logging Errors
+- Unit Testing
+- Integration Testing
+- Test-driven Development
+- Deployment
 
 #### 01 Getting started
 What is Node?
@@ -13,6 +28,10 @@ What is Node?
 - Javascript everywhere
 - Cleaner and more consistent codebase
 - Large ecosystem of open source library
+
+Who uses node js?
+    
+    neteflix, linkedin, paypal, ebay, uber, medium, groupon, nasa, wallmart,trello and many more.
 
 Architecture of Node
 - Javascript engines are used in various browsers. ( Edge-Chakra, Firefox-SpiderMokey and Chrome-v8)
@@ -56,6 +75,8 @@ file2.js
 			console.log(logger);
 Best practice - Make the imported as constant..
 
+ES 6 Export Types ( not natively supported on node as its common js )
+[Export Types](https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f)
 
 Module wrapper function
 - At runtime node converts the module into something like
@@ -176,9 +197,119 @@ Creating a projects package.json
 
 Installing a node package
     
-    npm i <package-name>
+    npm install <package-name>
+    eg _ npm i undersore
+  In initial version it was required to add --save suffix to add the npm package to package.json but its no longer required.
+
+Using a package
+var _ = require('underscore');
+// core module   require('module_name');
+// file or folder   require('./module_name');
+// node module require('module_name');
+First assume core module and then carryforward
+
+Package dependencies
+Initially the dependent packages were installed inside the requiring package, that created a lot of redundant data in windows limitation of number of characters of path. Suppose if the version required is different then only it will be stored inside the requiring package.
+
+
+npm packages and Source Control
+No need to commit the dependencies as it is mentioned inside package.json and can installed by npm install
+how to exclude from git?
+git init
+git status
+Add file  .gitignore
+List all the files in it to exclude to commit in git.
+check with git status
+git add.
+git commit -m 'our first commit'
+
+
+Semantic versioning
+SemVer
+MajorVersion.MinorVersion.PatchRelease
+[new feature breaking existing functionality].
+[Adding new features without breaking existing apis].
+[fixing a bug]
+^ caret - tells npm we are interest as far as the major version is same = 4.x
+~ Tilde we are interested as far as major and minor versions are same = 1.8.x
+exact version = '1.8.3'
+
+
+
+Listing the installed packages
+npm list
+npm list --depth=0
+
+
+
+Viewing Registry info for a package
+npm view <package_name>
+npm view <package_name> <property_name> eg_ dependencies, versions
+
+
+
+Installing a specific version of a Package
+npm install mongoose@2.4.2
+
+
+
+Updating Local Packages
+npm outdated
+npm update // minor and patch releases
+npm i -g npm-check-updates
+npm-check-updates
+npm-check-updates -u
+
+
+DevDependencies
+npm i jshint --save-dev
+
+
+
+Unistalling a package
+npm uninstall <package_name>
+npm un <package_name>
+
+
+Working with Global packages
+npm i -g npm
+npm -g outdated
+
+
+
+Publishing packages to npm registry
+mkdir lion-lib
+cd lion-lib
+npm init --yes
+Create file index.js
+ 
+    module.exports.add = function(a,b){ return a+b }
+Create account on npm
+npm login and 
+npm publish ( be specific to provide unique package name in package.json )
+
+
+
+Updating a published package
+again
+npm publish // will give erroe
+In package.json update the version or
+npm version major/minor/patch 
+npm publish
+
 
 #### 04 Building RESTful API using Express
+Introduction
+Express - fast and lightweight API framework
+
+RESTful Services
+Client          ---------- HTTP protocol (CRUD) ----------    Server
+Representational State Transfer
+HTTP methods - GET POST PUT(update) DELETE
+
+Introducing Express
+Fast, unopinionated, minimalist web framework for  [node](http://nodejs.org/).
+
 #### 05 Express Advanced Topics
 #### 06 Asynchrounous Javascript
 #### 07 CRUD Operations Using Javascript
@@ -191,3 +322,72 @@ Installing a node package
 #### 14 Test-driven Development
 #### 15 Deployment
 
+
+
+[link text](#abcd)
+
+
+**bold**
+*italic*
+
+# First Level Heading
+#### Fourth Level Heading
+Creatin a horizpntal rule below
+*** 
+    Code with 4 spaces indentation
+Images
+![alt Text](http://path.to.img "Title")
+
+Force a line break with 2 space  
+next line
+
+Providing link
+[link text](http://example.com)
+
+Creating a list
+* 1
+- 2
++ 3
+
+Nested list requires four space indentation
+* rootList
+    - subRoot 1
+    - subRoot 2
+* and it goes on...
+
+<a name="abcd">
+I am calling
+</a>
+
+
+***
+**56 hours** per week
+***
+**Targets**
+Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Node, Flutter, AWS, network penetration and ALdS
+***
+**Materials**
+- **Javacript** (953 pages) +  ( 17 hour videos ) + ( Implementation 10 hour )[39]
+- **Typescript** ( 7 hour max udemy video ) [10]
+- **Dart** ( yet to decide ) [ 12 ]
+- **Angular** ( 28 hour videos ) + ( Model implementation 10 hours ) [40]
+- **Node**  ( 31 hour videos ) + Implementation ( 6 hours ) [37]
+- **AWS** ( 13.50 hours ) + ( 6 hours exam preparation ) [20]
+- **CSS** ( yet to find ) [6]
+- **Bootstrap 4** ( Lynda - 10 hours ) [12]
+- **Flutter** ( 30 hour video ) ( Model Implementation - 15 hours ) [45]
+- **Java** ( 77 hour videos ) ( Model Implementations - 10 hours ) [87]
+- **Network Penetration** ( 6 hour videos ) ( Implementation 5 hours ) [11]
+- **ALdS** ( 6.042J 33 hours 6.006 42 hours 6.046 40 hours ) [ 115 ]
+***
+
+**Current Target**
+-  Javascript ( 40 hours )
+- Angular ( 40 hours )
+- AWS ( 20 hours )
+- Flutter ( 45 hours )
+
+***
+
+Burp Intruder
+OWASP
