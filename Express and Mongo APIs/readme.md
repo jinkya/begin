@@ -18,8 +18,10 @@
 - Test-driven Development
 - Deployment
 
+---
 #### 01 Getting started
-What is Node?
+
+##### What is Node?
 - An open source and cross platform runtime environment for executing javascript code outside of browser.
 - Often used for creating APIs
 - Highly scalable, data-intensive and real-time apps
@@ -29,16 +31,16 @@ What is Node?
 - Cleaner and more consistent codebase
 - Large ecosystem of open source library
 
-Who uses node js?
+##### Who uses node js?
     
     neteflix, linkedin, paypal, ebay, uber, medium, groupon, nasa, wallmart,trello and many more.
 
-Architecture of Node
+##### Architecture of Node
 - Javascript engines are used in various browsers. ( Edge-Chakra, Firefox-SpiderMokey and Chrome-v8)
 - Ryan Dahl with google v8 js engine embedded on C++ program created server side runtime environment for js code.
 - Node is not a language, not a framework
 
-How node works?
+##### How node works?
 - None blocking, aysnchronous Architecture
 - Single thread is used to handle multiple requests
 - Node is ideal for I/O intensive apps
@@ -46,15 +48,16 @@ How node works?
 
 Install the latest **stable** version
 
+---
 #### 02 Node module system
 - Core modules - os, fs, events, http
 
-Global Object
+##### Global Object
 - In node global is global object. global.console.log()	// part of global object
 - In browser window is global object like window.console.log()
 - But we use short hands only as its not mandatory to use those prefixes.
 
-Modules
+##### Modules
 - Create a modular approach for the app
 - Every file in node app is considered as module and any variables inside that module are scoped to that module.
 - console.log(module);
@@ -78,7 +81,7 @@ Best practice - Make the imported as constant..
 ES 6 Export Types ( not natively supported on node as its common js )
 [Export Types](https://hackernoon.com/import-export-default-require-commandjs-javascript-nodejs-es6-vs-cheatsheet-different-tutorial-example-5a321738b50f)
 
-Module wrapper function
+##### Module wrapper function
 - At runtime node converts the module into something like
 		
 		(function (exports, require, module, __filename, __dirname){
@@ -88,13 +91,13 @@ actually a more complicated than this.
 
 Inbuilt modules
 
-Path module
+##### Path module
 		
 		const path = require('path');
 		var pathObj = path.parse(__filename);
 		console.log(pathObj); // { root: ,dir,base,ext,name }
 
-OS module
+##### OS module
 		
 		const os = require('os');
 		var totalMemory = os.totalmem();
@@ -102,7 +105,7 @@ OS module
 		console.log('Total Memory '+totalMemory); // mb
 		console.log(`Free Memory ${freeMemory}`);
 		
-File System Module
+##### File System Module
 It have syn and async method, prefer to use async methods.
 			
 		const fs = require('fs');
@@ -113,7 +116,7 @@ It have syn and async method, prefer to use async methods.
 			else console.log('Result', files);
 		})
 		
-Events Module
+##### Events Module
 Order of occurrence is important.
 	const EventEmitter = require('events'); // EventEmitter is a class, container for properties and functions.
 	const emitter = new EventEmitter();	// object
@@ -126,7 +129,7 @@ Order of occurrence is important.
 	// raised an event
 	emitter.emit('messageLogged',{ id: 1, url: 'http://a' });	// Making a signal with event argument.
 	
-Extending an event emitter
+##### Extending an event emitter
 
 logger.js
 
@@ -161,7 +164,7 @@ app.js
 
 	logger('message');
 	
-HTTP Module
+##### HTTP Module
     
     const http = require('http');
 	
@@ -184,7 +187,7 @@ HTTP Module
 	server.listen(3000);
 	console.log('Listenning on port 3000...');
 	
-	
+---
 #### 03 Node Package manager
 package manager for javascript.  
 npm and node are developed independently.  
@@ -292,12 +295,12 @@ npm publish ( be specific to provide unique package name in package.json )
 
 Updating a published package
 again
-npm publish // will give erroe
+npm publish // will give error
 In package.json update the version or
 npm version major/minor/patch 
 npm publish
 
-
+---
 #### 04 Building RESTful API using Express
 Introduction
 Express - fast and lightweight API framework
@@ -310,20 +313,395 @@ HTTP methods - GET POST PUT(update) DELETE
 Introducing Express
 Fast, unopinionated, minimalist web framework for  [node](http://nodejs.org/).
 
+
+Building your first web server
+     
+      const express = require('express');
+      const app = express();
+	  // app.get/put/post/delete
+	  app.get('/',(req, res)=>{
+			res.send("hey their");	
+		})
+	  app.get('/api/courses',(req, res)=>{
+			res.send([5,6,7])
+		})
+      app.listen(3000, ()=>console.log('Listening on port 3000'));
+[More Req properties](https://expressjs.com/en/4x/api.html#req)
+
+
+Nodemon
+npm i -g nodemon
+
+
+Environment Variables
+For production environment
+const port = process.env.port || 3000;
+app.listen(port, ()=>console.log(`Listening on port ${port}`));
+set port = 5000    // try to run on different ports with env var
+
+##### Route parameter
+    
+    app.get('api/posts/:year/:month', (req, res){
+	    res.send(req.params);
+	  })
+	Hit the URL localhost:3000/api/posts/2018/1
+
 #### 05 Express Advanced Topics
+##### Introduction
+
+##### Middleware
+
+##### Creating custom Middleware
+
+#####  Built-in Middleware
+
+##### Third Party Middleware
+
+##### Environments
+
+##### Configuration
+
+##### Debugging
+
+##### Templating Engines
+
+##### Database Integration
+
+##### Authentication
+
+##### Structuring Express Application
+
+##### Project - Restructure the app
+
+---
 #### 06 Asynchrounous Javascript
+##### Synchronous vs asynchronous code
+
+##### Patterns for dealing with asynchronous code
+
+##### Callbacks
+
+##### Callback hell
+
+##### Named Functions to rescue
+
+##### Promises
+
+##### Replacing callbacks with promises
+
+##### Consuming Promises
+
+##### Creating Settled Promises
+
+##### Running Parallel Promises
+
+##### Async and await
+
+##### Exercise
+
+---
 #### 07 CRUD Operations Using Javascript
+##### Introducing MongoDB
+
+##### Installing mongodb on mac
+
+##### Installing mongodb on windows
+
+##### Connecting to MongoDB
+
+##### Schemas
+
+##### Models
+
+##### Saving a document
+
+##### Querying Documents
+
+##### Comparison Query Operators
+
+##### Logical Query Operators
+
+##### Regular Expressions
+
+##### Counting
+
+##### Pagination
+
+##### Exercise 1
+
+##### Exercise 2
+
+##### Exercise 3
+
+##### Updating Documents-Query First
+
+##### Updating Documents-Update First
+
+##### Removing documents
+
+---
 #### 08 Mongoose - Data validations
+##### Validation
+
+##### Built-in Validators
+
+##### Custom Validators
+
+##### Aync Validators
+
+##### Validation Errors
+
+##### Schema Type Options
+
+##### Project - Add Persistence to Genres API
+
+##### Project - Build the Customers API
+
+##### Restructuring the cables
+ 
+
+---
 #### 09 Mongoose - Modelling relashionships between Connected Data
-#### 10 Authentication and Authorisation
-#### 11 Handeling and Logging errors
+
+##### Modelling Relationships
+
+##### Referencing Documents
+
+##### Population
+
+##### Embedding documents
+
+##### Using an array of Sub-documents
+
+##### Project - Build the Movies API
+
+##### Project - Build the Rental API
+
+##### Transaction
+
+##### ObjectID
+
+##### Validating Object IDs
+
+##### A better implementation
+
+---
+#### 10 Authentication and Authorization
+
+##### Introduction
+
+##### Creating the user model
+
+##### Registering Users
+
+##### Using Lodash
+
+##### Hashing Passwords
+
+##### Authenticating Users
+
+##### Testing the Authentication
+
+##### JSON web tokens
+
+##### Generating Authentication Tokens
+
+##### Storing secrets in Environment Variables
+
+##### Setting Response Headers
+
+##### Encapsulating Logic in Mongoose Models
+
+##### Authorizing Middle-ware
+
+##### Protecting routes
+
+##### Getting the current user
+
+##### Logging out users
+
+##### Role based Authorization
+
+##### Testing the Authorization
+
+---
+#### 11 Handling and Logging errors
+
+##### Introduction
+
+##### Handling Rejected Promises
+
+##### Express Error Middleware
+
+##### Removing try-catch docs
+
+##### Express Async Errors
+
+##### Logging Errors
+
+##### Logging  to MongoDB
+
+##### Uncaught Exceptions
+
+##### Underhandled Promise Rejections
+
+##### Error Handeling Recap
+
+##### Refactoring index.js - Extracting Routes
+
+##### Extracting DB Logic
+
+##### Logging
+
+##### Extracting the config logic
+
+##### Extracting the validation logic
+
+##### Showing unhandeled Exceptions in the console
+
+
+---
 #### 12 Unit Testing
+
+##### What is Automated Testing
+
+##### Benefits of Automated testing
+
+##### Types of tests
+
+##### Test Pyramid 
+
+##### Tooling
+
+##### Writing Your First unit Test
+
+##### Testing Numbers
+
+##### Grouping Tests
+
+##### Refactoring with Confidence
+
+##### Testing Strings
+
+##### Testing Arrays
+
+##### Testing Objects
+
+##### Testing Exceptions
+
+##### Continually Running Tests
+
+##### Exercise - Testing the FizzBuzz
+
+##### Creating Simple Mock Functions
+
+##### Interaction Testing
+
+##### Jest Mock Function
+
+##### What to Unit Test
+
+##### Exercise
+
+---
 #### 13 Integration Testing
+
+##### Introduction
+
+##### Preparing the App
+
+##### Setting up the Test DB
+
+##### Your first Integration Test
+
+##### Populating the Test DB
+
+##### Testing Routes with Parameters
+
+##### Validating Object IDs
+
+##### Refactoring with confidence
+
+##### Testing the Authorization
+
+##### Testing Invalid Inputs
+
+##### Testing the Happy Paths
+
+##### Writing Clean Tests
+
+##### Testing the Auth Middleware
+
+##### Unit testing the Auth Middleware
+
+##### Code Coverage
+
+##### Exercise
+
+---
 #### 14 Test-driven Development
+
+##### What is Test-driven approach
+
+##### Implementing the Returns
+
+##### Test cases
+
+##### Populating the Database
+
+##### Testing the Authorization
+
+##### Testing the input
+
+##### Refactoring Tests
+
+##### Looking Up an object
+
+##### Testing if Rental processed
+
+##### Testing the Valid Request
+
+##### Testing the Return Date
+
+##### Testing the Rental fee
+
+##### Testing the movie stock
+
+##### Testing the Response
+
+##### Refactoring the validation logic
+
+##### Mongoose Static Methods
+
+##### Refactoring the Domain Logic
+
+---
 #### 15 Deployment
 
+##### Introduction
+
+##### Preparing the App for Production
+
+##### Getting started with Heroku
+
+##### Preparing the App for deployment
+
+##### Adding the code to a git repository
+
+##### Deploying to Heroku
+
+##### Viewing logs
+
+##### Setting environment variables
+
+##### MongoDB in the cloud
+
+---
 
 
+---
+
+# Extra Footnotes
 [link text](#abcd)
 
 
