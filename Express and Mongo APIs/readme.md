@@ -343,49 +343,463 @@ set port = 5000    // try to run on different ports with env var
     
     app.get('api/posts/:year/:month', (req, res){
 	    res.send(req.params);
+	    // res.send(req.query);
 	  })
 	Hit the URL localhost:3000/api/posts/2018/1
+	localhost:3000/api/posts/2018/1?sortBy=name
+	Route Parameters = 2018/1 -essential/req values
+	Query String Paramter - sortby=name - anything optional
+
+##### Handling HTTP GET Request
+
+	const courses =[
+	{id: 1, name: 'Java'},
+	{id: 2, name: 'Node'},
+	{id: 3, name: 'Rust'},
+	{id: 4, name: 'Go'},
+	]
+
+    app.get('/api/courses',(req, res)=>{
+		res.send(courses);
+	})
+
+    app.get('/api/courses/:id',(req, res)=>{
+		const course = courses.find(c => c.id ===parseInt(req.params.id));
+		if(!course) res.status(404).send('The required course not  found.');
+		else res.send(course)
+	})
+For 404 error goto browser console network
+
+##### Handling HTTP POST Request
+
+	app.use(express.json()); //adding a piece of middleware
+    app.post('/api/courses', (req,res)=>{
+		const course = {
+			id: courses.length+1,
+			name: req.body.name
+		};
+		courses.push(course);
+		res.body(course);
+	})
+
+##### Calling endpoints using Postman
+Install Postman Chrome App
+POST http://localhost:3000/api/courses
+Body raw JSON
+{
+	"name": ".NET"
+}
+Check status is 200? - request handled successfully
+
+##### Input Validation
+Never ever trust what client sends you.
+    
+    app.use(express.json()); //adding a piece of middleware
+    api.post('/api/courses', (req,res)=>{
+    if(!req.body.name || req.body.name.length < 3){
+		    // 400 Bad Request
+		    res.status(400).send("Name required and with min length 3.");
+		    return;
+	    }
+		const course = {
+			id: courses.length+1,
+			name: req.body.name
+		};
+		courses.push(course);
+		res.body(course);
+	})
+
+To make validations easier, we will look joi npm package
+
+    const Joi = require('joi');
+	const schema = {
+		name: Joi.string().min(3).required();
+	}
+	const result = Joi.validate(req.body, schema)	    //  body = { "name": "abcd" }
+
+with this you get error and value object.
+
+Thus use Joi to your advantage
+
+    const schema = {
+		name: Joi.string().min(3).required()
+	}
+	const result = Joi.validate(req.body. name);
+	
+	if(result.error){
+		res.status(400).send(result.error.details[0].length);
+		return;
+	}
+
+##### Handling HTTP PUT Request
+
+    app.put('/api/course/:id', (req,res)=>{
+	// Look up the course
+	const course = courses.find(c=> c.id === parseInt(req.params.id));
+	// If not existing , return 400 - not found
+	if(!course) res.status(400).send("We didnt found the course...");
+	
+	// otherwise validate
+	//const result = validateCourse(req.body);
+	//Object desctructuring
+	const { error } = validateCourse(req.body);
+	// if invalid return 404 - bad request
+	if(error){
+		res.status(404).send(error.details[0].message);
+		return;
+	}
+
+	course.name = req.body.name;
+	res.send(course);
+	// Update the course and return the updated course to client
+    })
+
+    function validateCourse(course){
+	    const schema = { name: Joi.string().min(3).required() }
+	    return Joi.validate(course, schema);
+    }
+
+##### Handling HTTP DELETE Request
+
+    app.delete('/api/courses/:id',(req,res)=>{
+		const course = courses.find(c=> c.id === parseInt(req.params.id));
+		// If not existing , return 400 - not found
+		if(!course) return res.status(400).send("We didnt found the course...");
+
+		const index = courses.indexOf(course);
+		courses.splice(index,1);
+		res.send(course);
+})
+
+
+##### Project - Build the Genres API
+[Refer](www.prjectravana.node.nodejscompleteguide.practise.index5)
 
 #### 05 Express Advanced Topics
 ##### Introduction
+Middleware
+Configuration
+Debugging 
+Templating Engines and many more
 
 ##### Middleware
+Express application is essentially a series of middleware calls.
+Middleware functions are functions that have access to request object(req), response object and the next middleware function in the application req res cycle.
+Every request go through **Request Processing Pipeline** having one or more middleware functions.
+Request -------------> [==] [==] -----------------> Response
+eg_ json() and route
+Middleware can perform following functions
+- Execute any code
+- Make changes to req and res objects
+- End the req res cycle
+- call the next middleware function in the stack
+
+Express have following middleware functions -
+- Application level ( app.use and app.METHOD )
+- Router level ( router.use and router.METHOD )
+- Error-handling ( app.use( function(err, req, res, next) ){} )
+- Built-in ( express.static, express.json and express.urlencoded )
+- Third-party ( like cookie-parser )
+
 
 ##### Creating custom Middleware
+    app.use(function(req, res, next){
+		console.log('logging...');
+		next();			// to pass control to the next middleware function in pipeline
+						// try to comment it out and see what happens.
+	})
+	app.use(function(req, res, next){
+		console.log('authenticating...');
+		next();
+	})
+Middleware functions are called in a sequence.
+
+But you are not going to create each function in the index.js, are you?
+Create a separate module for it.
+
+    function log(req, res, next){
+	    console.log('logging..');
+	    next();
+	}
+	module.exports = log;
+Import it in index.js
+	
+	const logger = require('./logger');
+	app.use(logger);
 
 #####  Built-in Middleware
+	express.json()
+parses the incoming requests with JSON payloads and is based on body-parser
+	
+	express.urlencoded()
+parses incoming req with url encoded payload like req with bodies - key=value&key=value 
+POST
+http://localhost:3000/api/courses
+Body x-www-form-urlencoded 
+name and my course
+
+but body-parser deprecated unefined extended
+thus
+	
+	app.use(express.urlencoded({ extended: true }))
+
+express.static()
+app.use(express.static('public'));
+Create folder express
+	readme.txt - this is a readme file.
+localhost:3000/readme.txt
+
 
 ##### Third Party Middleware
+You should not use every single middleware function cause it will impact performance. So use only whatever needed.
+eg-
+helmet
+npm i --save helmet
+const helmet = require('helmet');
+app.use(helmet());
+
+morgan
+logs http req in cmd
+npm i --save morgan
+const morgan = require('morgan');
+app.use(morgan('tiny'));
+
+Use these middlewares carefully as they will impact the performance.
+Such as use morgan for only particaular situation of logging.
 
 ##### Environments
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`app: ${app.get('env')}`);	// development by default
+
+Change environment in cmd
+set NODE_ENV = production
+development/ production/ staging
+Use these env to your advantages by setting the third party middleware active only in the required env
+if(app.get('env')==='development'){
+	app.use(morgan('tiny'));
+}
 
 ##### Configuration
+Storing config settings of the application.
+npm package rc
+npm i --save config
+md config
+---deafault.json
+	
+	{
+		"name": "My express App"
+	}
+---development.json
+		
+		{
+		"name": "My express App --development",
+			"mail": {
+					"host":"dev-mail-server"
+					}
+		}
+---production.json
+	
+	{
+		"name": "My express App --production",
+		"mail": {
+				"host":"prod-mail-server"
+			}
+	}
+
+---index.js
+
+	const config = require('config');
+	// configurations
+	console.log('Application name: '+config.get('name'));
+	console.log('Mail server: '+config.get('mail.host'))
+set NODE_ENV = development/production for checking
+but should not store application credentials over here like db passwords or mail server password.
+Need to store them in environment variables.
+set app_password=1234
+
+---custom-environment-variables.json
+   
+        {
+			"mail": {
+					"password":"app-password" // env variable
+					}
+		    }
+index.js
+    
+    console.log("Mail password: "+config.get('mail.password'));
 
 ##### Debugging
+console.log approach is common but tidious.
+npm i --save debug
+debug will replace console with env var to enable or disable debugging.
+Level of debugging can also be set like for db level only.
+---index.js
+    
+    const startupDebugger = require('debug')('app:startup');
+    const dbDebugger = require('debug')('app:db');
+    startupDebugger("Morgan enabled");
+    dbDebugger("connected to database");
+set debug environment according to requirement.
+set DEBUG=app:startup.app:db; // messages for both debugging
+set DEBUG=app:*;
+set DEBUG=app:startup;  // thus only messages for app startup
+set DEBUG= // nothing for nothing
+a bit of a shortcut like
+DEBUG=app:db nodemon index.js
+Again you can explore a lot of ways. My personal favourite is setting all these in package.json start command.
 
 ##### Templating Engines
+Pug(jade), mustache and EJS
+npm i pug
+---index.js
+app.set('view engine','pug');	// no need to require
+app.set('views','./views');	// set all your views inside views folder
+
+md views
+---index.pug
+    
+    html
+      head
+        title= title
+      body
+        h1=message
+
+---index.js
+
+    app.get('/',(req, res)=>{
+		res.render('index',{ title:'a', message: 'b' });		// index.pug
+	})     
+
+But really who needs templating engines when you have better options ;)
 
 ##### Database Integration
+[DB Drivers](https://expressjs.com/en/guide/database-integration.html)
+
 
 ##### Authentication
+Authentication is out of scope of express js as express is minimal lighweight framework and doesn't have opinion about authentication
 
 ##### Structuring Express Application
+Proper structure is required for application scale up.
+md routes
+--- courses.js
+
+    const express = require('express');
+	const router = express.Router();	// app
+
+module.exports = router;
+
+---index,js
+
+    const courses = require('./routes/courses');
+	app.use('/api/courses', courses); // for any URL with /api/router use courses router
+
+As the '/api/courses' path is stored in the app.use(), no need to use it in the courses router again, simply remove it.
 
 ##### Project - Restructure the app
 
 ---
 #### 06 Asynchrounous Javascript
+
 ##### Synchronous vs asynchronous code
+Synchronous Program
+
+    console.log("One");
+	console.log("Two");
+
+now the above code is synchronous as its executing 
+one after another in a consecutive manner.
+
+
+Asynchronous Program
+	
+	console.log("One");
+	setTimeout(()=>{ console.log("Two"); },2000)
+	console.log("Three");
+
+output will be One Three Two
+Aynchronous does not mean concurrent or multi threaded
 
 ##### Patterns for dealing with asynchronous code
 
+	console.log("One");
+	const user = getUser(1);
+	console.log(user);	// undefined
+	console.log("Three");
+	
+	function getUser(id){
+		setTimeout(()=>{
+			console.log("User ${id} accessing the DB.");
+			return { id: id, gitHubusername: 'ajinkya'};
+		},2000)
+	}
+
+Three patterns to deal with async code
+- callback
+- promises
+- aysnc/await ( syntactical sugar over promises )
+
 ##### Callbacks
 
+	console.log('callback pattern -----------');
+	console.log('Flag 1');
+
+	getFlag(2, function(obj){
+		console.log(`User ${obj}`);
+	})
+
+	function getFlag(n, callback){
+	setTimeout(()=>{
+		console.log(`Flag ${n}`);
+		callback({ id: n, user: 'ajinkya'})
+	})
+	}
+	
+	console.log('Flag 3');
+	console.log('callback pattern -----------');
+
 ##### Callback hell
+Christmas Tree Problem.
+Nested callback functions are complex.
+Deeply nested structure
+
 
 ##### Named Functions to rescue
+	console.log(`Before`);
+	getFlag(1, getRepositories);
+	console.log(`After`);
+
+	function getrepositories(user){
+	getRepositories(user.gitHubUsername, getCommits);
+	}
+	
+	function getCommits(repos){
+	getCommits(repo, displayCommits);
+	}
+	
+	function displayCommits(commits){
+	console.log(commits);
+	}
+
+	getUser(id, callback){
+	setTimeout(()=>{
+		console.log(Reading a user from database...);
+		callback({id: id, gitHubUsername: 'ajinkya'});
+	}, 2000);
 
 ##### Promises
+Pending ------ async operation -------> fullfilled / rejected
+
+	const p = new Promise((resolve, reject)=>{
+	setTimeout(()=>{
+		//resolve(1);
+		reject(new Error('got an error'));
+	},2000);
+	});
+	
+	p
+	.then(result=>console.log('Result', result))
+	.catch(err=>console.log('Error', err.message));
 
 ##### Replacing callbacks with promises
 
@@ -767,5 +1181,169 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Node, Flutter, AW
 
 ***
 
+[Beautiful weather app](https://medium.com/@hamedbaatour/build-a-real-world-beautiful-web-app-with-angular-6-a-to-z-ultimate-guide-2018-part-i-e121dd1d55e)
+
+[Everything new in ECMA](https://medium.freecodecamp.org/here-are-examples-of-everything-new-in-ecmascript-2016-2017-and-2018-d52fa3b5a70e)
+
+[All about js functions](https://codeburst.io/all-about-javascript-functions-in-1-article-49bfd94b31ab)
+
+
+
 Burp Intruder
 OWASP
+cold pursuit
+vice 
+the upwards
+BGMs arjun reddy vedalam kaththi kaala kabali mari (dhanush)
+
+weekdays weekends
+
+Wake up 04.50 06.00
+
+Exercise 00.45 00.30
+
+Study 06.00 13.00
+
+Sleep 11.15 11.30
+
+--------------------------
+
+  
+
+Sleep 11.15 P.M.
+
+  
+
+Wake up 04.50 A.M.
+
+Exercise 05.45 A.M.
+
+Ready 06.00 A.M.
+
+Office 06.30 A.M.
+
+Study 09.30 A.M.
+
+Lunch 12.30 P.M.
+
+News 01.00 P.M.
+
+Nap 01.30 P.M.
+
+Snacks 05.00 P.M.
+
+Leave 06.30 P.M.
+
+Groceries 07.00 P.M.
+
+  
+
+Dinner 25 minutes
+
+Study 03 hours
+
+Sleep 11.30 A.M.
+
+  
+
+  
+
+  
+
+Weekdays 30 hours
+
+Weekends
+
+  
+
+Sleep 11.30 P.M.
+
+Wake up 06.00 A.M.
+
+Yoga 06.30 A.M.
+
+Ready 07.00 A.M.
+
+Study 09.30 A.M.
+
+BF 10.30 A.M.
+
+Wash 11.00 A.M.
+
+Study 01.00 P.M.
+
+Nap 01.30 P.M.
+
+Study 06.00 P.M.
+
+Snacks 07.00 P.M.
+
+  
+
+Dinner 20 minutes
+
+Study 4 hours
+
+  
+
+Weekends = 13 x 2 hours = 26 hours
+
+Weekdays = 06 x 5 hours = 30 hours
+
+Study hours = 56
+
+  
+
+footnote
+
+---------------------------------------------------------Newspapaer
+
+https://www.firstpost.com/
+
+https://www.livemint.com/
+
+https://loksatta.com
+
+https://maharashtratimes.indiatimes.com/
+
+---------------------------------------------------------Food
+
+Sprouts
+
+Boiled Eggs
+
+---------------------------------------------------------Exercise
+
+  
+
+  
+
+  
+
+My Ideas
+
+  
+
+Persona -
+
+Person Timeline ( Birth, Milestones, Achievements, Setbacks, etc )
+
+Controversial statements
+
+Verify the links
+
+[ verification, thumb ups, links for the claims ]
+
+Classification ( Country, Religion, Cast, etc )
+
+Top profiles
+
+  
+
+jinkya.io blog
+
+technical stuffs
+
+javascript, angular, java, flutter, dart. python, etc
+
+invite people to write articles on your blog
