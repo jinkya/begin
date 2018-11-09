@@ -104,3 +104,50 @@ Lynda ( reveal.js - 2 h 2 m )
 - Logging
 - Testing
 - Deployment
+
+
+
+***
+***
+
+weekdays weekends
+
+Sleep@   11.15 11.30
+
+Wakeup@  04.50 06.00
+
+Exercise 00.45 00.30
+
+Hours    06.00 13.00
+
+
+--------------------------
+ 
+
+Weekends = 13 x 2 hours = 26 hours
+
+Weekdays = 06 x 5 hours = 30 hours
+
+Overall hours = 56
+
+  
+
+footnote
+
+---------------------------------------------------------Newspapaer
+
+https://www.firstpost.com/
+
+https://www.livemint.com/
+
+https://loksatta.com
+
+https://maharashtratimes.indiatimes.com/
+
+---------------------------------------------------------Food
+
+Sprouts
+
+Boiled Eggs
+
+---------------------------------------------------------
