@@ -3,14 +3,14 @@
 **56 hours** per week
 ***
 **Targets**
-Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Node, Flutter, AWS, network penetration, python and ALdS
+Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flutter, AWS, network penetration, python and ALdS
 ***
 **Materials**
 - **Javacript** ( 953 pages and 38 hours )
 - **Typescript** ( 7 hours)
 - **Dart** ( ytd )
 - **Angular** ( 28 hours )
-- **Node**  ( 38 hours )
+- **Node**  ( 38 hours + 520 pages )
 - **AWS** ( 14 hours )
 - **CSS** ( 17 hours )
 - **Bootstrap 4** ( Lynda - 10 hours )
@@ -18,6 +18,9 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Node, Flutter, AW
 - **Java** ( 77 hour videos )
 - **Network Penetration** ( 6 hours )
 - **ALdS** ( 6.042J 33 hours 6.006 42 hours 6.046 40 hours )
+- **Spring** ( ytd )
+- **Python** ( ytd )
+
 ***
 **Current Target**
 -  Javascript ( 40 hours )
@@ -56,6 +59,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Node, Flutter, AW
 - Lynda ( Advanced Node.js Scaling Applications - 1 h 15 m )
 - Lynda ( Building Complex Express Sites with Redis and Socket IO - 3 h 26 m )
 - Udemy ( Node.js The complete guide to build to build RESTful APIs - 15 h )
+- Node js Design Patterns ( 520 pages )
 
 **network penetration**
 - Udemy ( Learn network hacking from scratch - 6 hours )
