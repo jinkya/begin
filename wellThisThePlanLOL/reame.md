@@ -5,7 +5,7 @@
 **Targets**
 Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flutter, AWS, network penetration, python and ALdS
 ***
-**Materials**
+**Materials** ( 380 hours 1473 pages )
 - **Javacript** ( 953 pages and 38 hours )
 - **Typescript** ( 7 hours)
 - **Dart** ( ytd )
