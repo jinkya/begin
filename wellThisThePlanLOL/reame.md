@@ -23,7 +23,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 
 ***
 **Current Target**
--  Javascript ( 40 hours )
+- Javascript ( 40 hours )
 - Angular ( 40 hours )
 - AWS ( 20 hours )
 - Flutter ( 45 hours )
@@ -33,52 +33,53 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 **Material Access**
 
 ***javascript***
-- Books ( You don't know javascript - 953 pages )
-- Udemy ( Learning Algorithms in Javascript from scratch - 3.5 hours )
-- Udemy ( Learning Blockchain by building your own in js - 8 hours )
-- Lynda ( ES 6 - The right parts - 5 h 17 m !retiring 21 12 2018 )
-- Lynda ( Coercion in javascript - 3h 18 m !retiring 21 12 2018 )
-- Lynda ( Functional Lite Javascript - 3h 9 m )
-- Lynda ( Rethinking Asynchronous Javascript - 6 h 22 m !retiring 21 12 2018 )
-- Lynda ( Javascript Classes - 37 m )
-- Lynda ( Javascript Functions - 1 h 25 m )
-- Lynda ( Code clinic Javascript - 3 h 38 m )
-- Lynda ( Learning Tensor Flow with Javascript - 57 m )
-- Lynda( HTTP/2 Developing for Performance - 2 h 18 m )
+- j[101] Books ( You don't know javascript - 953 pages )
+- j[102] Udemy ( Learning Algorithms in Javascript from scratch - 3.5 hours )
+- j[103] Udemy ( Learning Blockchain by building your own in js - 8 hours )
+- j[104] Lynda ( ES 6 - The right parts - 5 h 17 m !retiring 21 12 2018 )
+- j[105] Lynda ( Coercion in javascript - 3h 18 m !retiring 21 12 2018 )
+- j[106] Lynda ( Functional Lite Javascript - 3h 9 m )
+- j[107] Lynda ( Rethinking Asynchronous Javascript - 6 h 22 m !retiring 21 12 2018 )
+- j[108] Lynda ( Javascript Classes - 37 m )
+- j[109] Lynda ( Javascript Functions - 1 h 25 m )
+- j[110] Lynda ( Code clinic Javascript - 3 h 38 m )
+- j[111] Lynda ( Learning Tensor Flow with Javascript - 57 m )
+- j[112] Lynda( HTTP/2 Developing for Performance - 2 h 18 m )
 
 **typescript**
-- Udemy ( Understanding Typescript - 7 h )
+- t[201] Udemy ( Understanding Typescript - 7 h )
 
 **angular**
-- Udemy ( Angular 7 - The complete Guide - 28 h )
+- a[301] Udemy ( Angular 7 - The complete Guide - 28 h )
 
 **node js**
-- Udemy ( The Node js master class - 15.5 hours )
-- Lynda ( Node.js Security - 52 m )
-- Lynda ( Node.js Design Patterns - 2 h 11 m )
-- Lynda ( Advanced Node.js Scaling Applications - 1 h 15 m )
-- Lynda ( Building Complex Express Sites with Redis and Socket IO - 3 h 26 m )
-- Udemy ( Node.js The complete guide to build to build RESTful APIs - 15 h )
-- Node js Design Patterns ( 520 pages )
+- n[401] Udemy ( The Node js master class - 15.5 hours )
+- n[402] Lynda ( Node.js Security - 52 m )
+- n[403] Lynda ( Node.js Design Patterns - 2 h 11 m )
+- n[404] Lynda ( Advanced Node.js Scaling Applications - 1 h 15 m )
+- n[405] Lynda ( Building Complex Express Sites with Redis and Socket IO - 3 h 26 m )
+- n[406] Udemy ( Node.js The complete guide to build to build RESTful APIs - 15 h )
+- n[407] Node js Design Patterns ( 520 pages )
 
 **network penetration**
-- Udemy ( Learn network hacking from scratch - 6 hours )
+- np[501] Udemy ( Learn network hacking from scratch - 6 hours )
 
 **AWS**
-- Udemy ( AWS Certified Developer Associate - 14 hours )
+- aws[601] Udemy ( AWS Certified Developer Associate - 14 hours )
 
-Udemy ( Complete Java masterclass - 77 hours )
+**Java**
+- ja[701] Udemy ( Complete Java masterclass - 77 hours )
 
 **CSS**
-- Lynda ( CSS Essential Training 1 - 2 h 36 m )
-- Lynda ( CSS Essential Training 2 - 2 h 21 m )
-- Lynda ( CSS Essential Training 3 - 1 h 30 m )
-- Lynda ( Creating a Responsive web Design - 3 h 47 m )
-- Lynda ( making sense of CSS Box Model - 50 m )
-- Lynda ( Bootstrap 4 Essential Training - 6 h )
+- cs[801] Lynda ( CSS Essential Training 1 - 2 h 36 m )
+- cs[802] Lynda ( CSS Essential Training 2 - 2 h 21 m )
+- cs[803] Lynda ( CSS Essential Training 3 - 1 h 30 m )
+- cs[804] Lynda ( Creating a Responsive web Design - 3 h 47 m )
+- cs[805] Lynda ( making sense of CSS Box Model - 50 m )
+- cs[806] Lynda ( Bootstrap 4 Essential Training - 6 h )
 
 **Presentation with web**
-Lynda ( reveal.js - 2 h 2 m )
+- pr[901] Lynda ( reveal.js - 2 h 2 m )
 
 ***
 ***
