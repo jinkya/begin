@@ -3,7 +3,6 @@
 
 |Timestamp|Wake Up  | Exercise | Target | Down |
 |--|--|--|--|--|
-| 13 Nov 2018 | xxx | xxx | j[104] j[108] | xxx |
 | 14 Nov 2018 | xxx | xxx | xxx | xxx |
 | 15 Nov 2018 | xxx | xxx | xxx | xxx |
 | 16 Nov 2018 | xxx | xxx | xxx | xxx |
