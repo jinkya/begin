@@ -7,35 +7,35 @@ Workflow
 
 Login -> 
 
-Students ->    
-                        Evaluations ( Exam Date, Marks, MCQs, Keys  )
-                        MCQs ( Keys )
-                        Student Profile
-                        ( Gender, First Name, Middle Name, Last Name, Primary Address, Secondary Address, City, Date of Birth, Languages, Mobile Number, email address, Parent 1 Name, Parent 1 Mobile No, Parent 2 Name, Parent2 Mobile No )
+Students ->      
+                        Evaluations ( Exam Date, Marks, MCQs, Keys  )  
+                        MCQs ( Keys )  
+                        Student Profile  
+                        ( Gender, First Name, Middle Name, Last Name, Primary Address, Secondary Address, City, Date of Birth, Languages, Mobile Number, email address, Parent 1 Name, Parent 1 Mobile No, Parent 2 Name, Parent2 Mobile No )  
 
-Parents ->
-                         Child Performance
-                         Fees status
-                         Connect the Teacher
+Parents ->  
+                         Child Performance  
+                         Fees status  
+                         Connect the Teacher  
 
-Teacher ->       
-                          Evaluations ( Add the evaluations and communicate to parents )
-                          MCQs ( keys )
-                          Teacher Profile
-                         ( Gender, First Name, Middle Name, Last Name, Primary Address, Secondary Address, City, Date of Birth,  Mobile No, email address, Languages )
-                          Student Profiles ( Name, Parent Mobile No, Evaluations )
+Teacher ->         
+                          Evaluations ( Add the evaluations and communicate to parents )  
+                          MCQs ( keys )  
+                          Teacher Profile  
+                         ( Gender, First Name, Middle Name, Last Name, Primary Address, Secondary Address, City, Date of Birth,  Mobile No, email address, Languages )  
+                          Student Profiles ( Name, Parent Mobile No, Evaluations )  
 
-Admin ->
-                           Users Read, Creation, Updation, Deletion
-                           MCQs ( keys )
-                           Admin Profile ( Read, Update, Delete )
-                           Teacher Profile ( . ) 
-                           Students Profile ( . )
+Admin ->  
+                           Users Read, Creation, Updation, Deletion  
+                           MCQs ( keys )  
+                           Admin Profile ( Read, Update, Delete )  
+                           Teacher Profile ( . )   
+                           Students Profile ( . )  
 
-DB design
+DB design  
 
-Profiles
-MCQs
+Profiles  
+MCQs  
 
 
 --------------------------------------------
