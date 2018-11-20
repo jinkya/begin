@@ -30,35 +30,37 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 
 ***
 
-**Material Access**
+**Material Access**  
+
+[Backlog] [To do] [Doing] [Done]
 
 ***javascript***
-- j[101] Books ( You don't know javascript - 953 pages )
-- j[102] Udemy ( Learning Algorithms in Javascript from scratch - 3.5 hours )
-- j[103] Udemy ( Learning Blockchain by building your own in js - 8 hours )
-- j[104] Lynda ( ES 6 - The right parts - 5 h 17 m !retiring 21 12 2018 )
-- j[105] Lynda ( Coercion in javascript - 3h 18 m !retiring 21 12 2018 )
-- j[106] Lynda ( Functional Lite Javascript - 3h 9 m )
-- j[107] Lynda ( Rethinking Asynchronous Javascript - 6 h 22 m !retiring 21 12 2018 )
-- j[108] Lynda ( Javascript Classes - 37 m )
-- j[109] Lynda ( Javascript Functions - 1 h 25 m )
-- j[110] Lynda ( Code clinic Javascript - 3 h 38 m )
-- j[111] Lynda ( Learning Tensor Flow with Javascript - 57 m )
-- j[112] Lynda( HTTP/2 Developing for Performance - 2 h 18 m )
+- j[101] [To do] Books ( You don't know javascript - 953 pages ) 
+- j[102] [Doing] Udemy ( Learning Algorithms in Javascript from scratch - 3.5 hours )   
+- j[103] [Doing] Udemy ( Learning Blockchain by building your own in js - 8 hours )    
+- j[104] [Doing] Lynda ( ES 6 - The right parts - 5 h 17 m !retiring 21 12 2018 )   
+- j[105] [Doing] Lynda ( Coercion in javascript - 3h 18 m !retiring 21 12 2018 )   
+- j[106] [To do] Lynda ( Functional Lite Javascript - 3h 9 m )  
+- j[107] [To do] Lynda ( Rethinking Asynchronous Javascript - 6 h 22 m !retiring 21 12 2018 ) 
+- j[108] [Done ] Lynda ( Javascript Classes - 37 m ) 
+- j[109] [Doing] Lynda ( Javascript Functions - 1 h 25 m ) 
+- j[110] [To do] Lynda ( Code clinic Javascript - 3 h 38 m ) 
+- j[111] [To do] Lynda ( Learning Tensor Flow with Javascript - 57 m ) 
+- j[112] [To do] Lynda( HTTP/2 Developing for Performance - 2 h 18 m ) 
 
 **typescript**
 - t[201] Udemy ( Understanding Typescript - 7 h )
 
 **angular**
-- a[301] Udemy ( Angular 7 - The complete Guide - 28 h )
+- a[301] Udemy ( Angular 7 - The complete Guide - 28 h ) [Doing]
 
 **node js**
-- n[401] Udemy ( The Node js master class - 15.5 hours )
+- n[401] Udemy ( The Node js master class - 15.5 hours )[Doing]  
 - n[402] Lynda ( Node.js Security - 52 m )
 - n[403] Lynda ( Node.js Design Patterns - 2 h 11 m )
 - n[404] Lynda ( Advanced Node.js Scaling Applications - 1 h 15 m )
 - n[405] Lynda ( Building Complex Express Sites with Redis and Socket IO - 3 h 26 m )
-- n[406] Udemy ( Node.js The complete guide to build to build RESTful APIs - 15 h )
+- n[406] Udemy ( Node.js The complete guide to build to build RESTful APIs - 15 h )[Doing]  
 - n[407] Node js Design Patterns ( 520 pages )
 
 **network penetration**
@@ -96,6 +98,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - Lazy Loading
 
 **Flutter**
+- Tutors Management System
 - news blog
 - story blog
 - authentication
