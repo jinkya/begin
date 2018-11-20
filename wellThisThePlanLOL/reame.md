@@ -47,6 +47,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - j[110] [To do] Lynda ( Code clinic Javascript - 3 h 38 m ) 
 - j[111] [To do] Lynda ( Learning Tensor Flow with Javascript - 57 m ) 
 - j[112] [To do] Lynda( HTTP/2 Developing for Performance - 2 h 18 m ) 
+- j[113] [Doing] Lynda ( Javascript Scope - 41 m 28 s )
 
 **typescript**
 - t[201] Udemy ( Understanding Typescript - 7 h )
