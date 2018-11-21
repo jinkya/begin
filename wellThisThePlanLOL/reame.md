@@ -39,7 +39,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - j[102] [Doing] Udemy ( Learning Algorithms in Javascript from scratch - 3.5 hours )   
 - j[103] [Doing] Udemy ( Learning Blockchain by building your own in js - 8 hours )    
 - j[104] [Doing] Lynda ( ES 6 - The right parts - 5 h 17 m !retiring 21 12 2018 )   
-- j[105] [Doing] Lynda ( Coercion in javascript - 3h 18 m !retiring 21 12 2018 )   
+- j[105] [Done ] Lynda ( Coercion in javascript - 3h 18 m !retiring 21 12 2018 )   
 - j[106] [To do] Lynda ( Functional Lite Javascript - 3h 9 m )  
 - j[107] [To do] Lynda ( Rethinking Asynchronous Javascript - 6 h 22 m !retiring 21 12 2018 ) 
 - j[108] [Done ] Lynda ( Javascript Classes - 37 m ) 
@@ -50,28 +50,28 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - j[113] [Doing] Lynda ( Javascript Scope - 41 m 28 s )
 
 **typescript**
-- t[201] Udemy ( Understanding Typescript - 7 h )
+- t[201] [To do] Udemy ( Understanding Typescript - 7 h )
 
 **angular**
-- a[301] Udemy ( Angular 7 - The complete Guide - 28 h ) [Doing]
+- a[301] [Doing] Udemy ( Angular 7 - The complete Guide - 28 h ) 
 
 **node js**
-- n[401] Udemy ( The Node js master class - 15.5 hours )[Doing]  
-- n[402] Lynda ( Node.js Security - 52 m )
-- n[403] Lynda ( Node.js Design Patterns - 2 h 11 m )
-- n[404] Lynda ( Advanced Node.js Scaling Applications - 1 h 15 m )
-- n[405] Lynda ( Building Complex Express Sites with Redis and Socket IO - 3 h 26 m )
-- n[406] Udemy ( Node.js The complete guide to build to build RESTful APIs - 15 h )[Doing]  
-- n[407] Node js Design Patterns ( 520 pages )
+- n[401] [Doing] Udemy ( The Node js master class - 15.5 hours )  
+- n[402] [To do] Lynda ( Node.js Security - 52 m )
+- n[403] [To do] Lynda ( Node.js Design Patterns - 2 h 11 m )
+- n[404] [To do] Lynda ( Advanced Node.js Scaling Applications - 1 h 15 m )
+- n[405] [To do] Lynda ( Building Complex Express Sites with Redis and Socket IO - 3 h 26 m )
+- n[406] [Doing] Udemy ( Node.js The complete guide to build to build RESTful APIs - 15 h )  
+- n[407] [To do] Node js Design Patterns ( 520 pages )
 
 **network penetration**
-- np[501] Udemy ( Learn network hacking from scratch - 6 hours )
+- np[501] [To do] Udemy ( Learn network hacking from scratch - 6 hours )
 
 **AWS**
-- aws[601] Udemy ( AWS Certified Developer Associate - 14 hours )
+- aws[601] [To do] Udemy ( AWS Certified Developer Associate - 14 hours )
 
 **Java**
-- ja[701] Udemy ( Complete Java masterclass - 77 hours )
+- ja[701] [To do] Udemy ( Complete Java masterclass - 77 hours )
 
 **CSS**
 - cs[801] Lynda ( CSS Essential Training 1 - 2 h 36 m )
