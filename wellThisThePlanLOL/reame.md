@@ -1,4 +1,5 @@
 
+
 ***
 **56 hours** per week
 ***
@@ -8,7 +9,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 **Materials** ( 380 hours 1473 pages )
 - **Javacript** ( 953 pages and 38 hours )
 - **Typescript** ( 7 hours)
-- **Dart** ( ytd )
+- **Dart** ( official documentation )
 - **Angular** ( 28 hours )
 - **Node**  ( 38 hours + 520 pages )
 - **AWS** ( 14 hours )
@@ -69,6 +70,9 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 
 **AWS**
 - aws[601] [To do] Udemy ( AWS Certified Developer Associate - 14 hours )
+
+**Dart**
+- [Official Documentation](https://www.dartlang.org/guides/language/language-tour#typedefs)
 
 **Java**
 - ja[701] [To do] Udemy ( Complete Java masterclass - 77 hours )
