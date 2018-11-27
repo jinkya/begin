@@ -4,7 +4,7 @@
 **56 hours** per week
 ***
 **Targets**
-Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flutter, AWS, network penetration, python and ALdS
+Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flutter, AWS, network penetration, python, machine learning, pandas, deep learning, data visualisation, sql, time series with Siraj, R, Embeddings, Machine Learning Explainability and ALdS
 ***
 **Materials** ( 380 hours 1473 pages )
 - **Javacript** ( 953 pages and 38 hours )
@@ -36,7 +36,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 [Backlog] [To do] [Doing] [Done]
 
 ***javascript***
-- j[101] [To do] Books ( You don't know javascript - 953 pages ) 
+- j[101] [To do] Books ( You don't know javascript - Up and Going - 87 ) 
 - j[102] [Doing] Udemy ( Learning Algorithms in Javascript from scratch - 3.5 hours )   
 - j[103] [Doing] Udemy ( Learning Blockchain by building your own in js - 8 hours )    
 - j[104] [Doing] Lynda ( ES 6 - The right parts - 5 h 17 m !retiring 21 12 2018 )   
@@ -49,6 +49,11 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - j[111] [To do] Lynda ( Learning Tensor Flow with Javascript - 57 m ) 
 - j[112] [To do] Lynda( HTTP/2 Developing for Performance - 2 h 18 m ) 
 - j[113] [Doing] Lynda ( Javascript Scope - 41 m 28 s )
+- j[116] [To do] Books ( You don't know javascript - Types and Grammer - 195 )  
+- j[114] [To do] Books ( You don't know javascript - Scope and Closures - 98 )  
+- j[115] [To do] Books ( You don't know javascript - this and Object Prototypes - 173 )  
+- j[117] [To do] Books ( You don't know javascript - Async and Performance - 172 )  
+- j[118] [To do] Books ( You don't know javascript - ES6 and Beyond - 228 )  
 
 **typescript**
 - t[201] [To do] Udemy ( Understanding Typescript - 7 h )
@@ -88,6 +93,18 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 **Presentation with web**
 - pr[901] Lynda ( reveal.js - 2 h 2 m )
 
+**Data Science**  
+- ds[901] Python  
+- ds[902] Machine Learning  
+- ds[903] Pandas  
+- ds[904] Deep Learning  
+- ds[905] Data Visualisation  
+- ds[906] Sql  
+- ds[907] Time series with Siraj  
+- ds[908] R 
+- ds[909] Embeddings 
+- ds[910] Machine Learning Explainability
+
 ***
 ***
 
@@ -117,6 +134,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - Logging
 - Testing
 - Deployment
+
 
 
 
