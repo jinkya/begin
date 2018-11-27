@@ -94,16 +94,16 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - pr[901] Lynda ( reveal.js - 2 h 2 m )
 
 **Data Science**  
-- ds[901] Python  
-- ds[902] Machine Learning  
-- ds[903] Pandas  
-- ds[904] Deep Learning  
-- ds[905] Data Visualisation  
-- ds[906] Sql  
-- ds[907] Time series with Siraj  
-- ds[908] R 
-- ds[909] Embeddings 
-- ds[910] Machine Learning Explainability
+- ds[901] Kaggle ( Python - 7 h )
+- ds[902] Kaggle ( Machine Learning - 4 h )  
+- ds[903] Kaggle ( Pandas - 4 h )  
+- ds[904] Kaggle ( Deep Learning - 4 h )  
+- ds[905] Kaggle ( Data Visualisation - 7 h )  
+- ds[906] Kaggle ( Sql - 3 h )  
+- ds[907] Kaggle ( Time series with Siraj - 1 h )  
+- ds[908] Kaggle ( R - 7 h ) 
+- ds[909] Kaggle ( Embeddings - 6 h ) 
+- ds[910] Kaggle ( Machine Learning Explainability - 4 h )
 
 ***
 ***
