@@ -4,7 +4,7 @@
 **56 hours** per week
 ***
 **Targets**
-Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flutter, AWS, network penetration, python, machine learning, pandas, deep learning, data visualisation, sql, time series with Siraj, R, Embeddings, Machine Learning Explainability and ALdS
+Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flutter, AWS, network penetration, electron js, python, machine learning, pandas, deep learning, data visualisation, sql, time series with Siraj, R, Embeddings, Machine Learning Explainability and ALdS
 ***
 **Materials** ( 380+x hours 1473 pages )
 - **Javacript** ( 953 pages and 38 hours )
@@ -60,6 +60,9 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 
 **angular**
 - a[301] [Doing] Udemy ( Angular 7 - The complete Guide - 28 h ) 
+
+**electron js**
+- documentation
 
 **node js**
 - n[401] [Doing] Udemy ( The Node js master class - 15.5 hours )  
