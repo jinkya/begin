@@ -6,7 +6,7 @@
 **Targets**
 Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flutter, AWS, network penetration, python, machine learning, pandas, deep learning, data visualisation, sql, time series with Siraj, R, Embeddings, Machine Learning Explainability and ALdS
 ***
-**Materials** ( 380 hours 1473 pages )
+**Materials** ( 380+x hours 1473 pages )
 - **Javacript** ( 953 pages and 38 hours )
 - **Typescript** ( 7 hours)
 - **Dart** ( official documentation )
