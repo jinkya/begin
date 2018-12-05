@@ -35,7 +35,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 
 [Backlog] [To do] [Doing] [Done]
 
-***javascript***
+***javascript*** [ 39 h 15 m  ||  1473 pages]
 - j[101] [To do] Books ( You don't know javascript - Up and Going - 87 ) 
 - j[102] [Doing] Udemy ( Learning Algorithms in Javascript from scratch - 3.5 hours )   
 - j[103] [Doing] Udemy ( Learning Blockchain by building your own in js - 8 hours )    
@@ -64,7 +64,7 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 **electron js**
 - documentation
 
-**node js**
+**node js** [ 37 m 82 m || 520 pages ]
 - n[401] [Doing] Udemy ( The Node js master class - 15.5 hours )  
 - n[402] [To do] Lynda ( Node.js Security - 52 m )
 - n[403] [To do] Lynda ( Node.js Design Patterns - 2 h 11 m )
@@ -73,19 +73,19 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - n[406] [Doing] Udemy ( Node.js The complete guide to build to build RESTful APIs - 15 h )  
 - n[407] [To do] Node js Design Patterns ( 520 pages )
 
-**network penetration**
+**network penetration** [ 6 h ]
 - np[501] [To do] Udemy ( Learn network hacking from scratch - 6 hours )
 
-**AWS**
+**AWS** [ 14 h ]
 - aws[601] [To do] Udemy ( AWS Certified Developer Associate - 14 hours )
 
 **Dart**
 - [Official Documentation](https://www.dartlang.org/guides/language/language-tour#typedefs)
 
-**Java**
+**Java** [ 77 h ]
 - ja[701] [To do] Udemy ( Complete Java masterclass - 77 hours )
 
-**CSS**
+**CSS** [ 17 h 14 m ]
 - cs[801] Lynda ( CSS Essential Training 1 - 2 h 36 m )
 - cs[802] Lynda ( CSS Essential Training 2 - 2 h 21 m )
 - cs[803] Lynda ( CSS Essential Training 3 - 1 h 30 m )
@@ -93,10 +93,10 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 - cs[805] Lynda ( making sense of CSS Box Model - 50 m )
 - cs[806] Lynda ( Bootstrap 4 Essential Training - 6 h )
 
-**Presentation with web**
+**Presentation with web** [ 2 h 2 m ]
 - pr[901] Lynda ( reveal.js - 2 h 2 m )
 
-**Data Science**  
+**Data Science**  [ 47 h ]
 - ds[901] Kaggle ( Python - 7 h )
 - ds[902] Kaggle ( Machine Learning - 4 h )  
 - ds[903] Kaggle ( Pandas - 4 h )  
