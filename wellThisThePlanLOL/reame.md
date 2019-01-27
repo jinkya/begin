@@ -144,17 +144,6 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 ***
 ***
 
-weekdays weekends
-
-Sleep@   11.15 11.30
-
-Wakeup@  04.50 06.00
-
-Exercise 00.45 00.30
-
-Hours    06.00 13.00
-
-
 --------------------------
  
 
@@ -178,10 +167,5 @@ https://loksatta.com
 
 https://maharashtratimes.indiatimes.com/
 
----------------------------------------------------------Food
-
-Sprouts
-
-Boiled Eggs
 
 ---------------------------------------------------------
