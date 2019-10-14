@@ -1,7 +1,7 @@
 
 
 ***
-**56 hours** per week
+**xx hours** per week
 ***
 **Targets**
 Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flutter, AWS, network penetration, electron js, python, machine learning, pandas, deep learning, data visualisation, sql, time series with Siraj, R, Embeddings, Machine Learning Explainability and ALdS
@@ -147,17 +147,13 @@ Javascript, Typescript, Dart, CSS, Bootstrap 4, Angular, Java, Spring, Node, Flu
 --------------------------
  
 
-Weekends = 13 x 2 hours = 26 hours
 
-Weekdays = 06 x 5 hours = 30 hours
-
-Overall hours = 56
 
   
 
 footnote
 
----------------------------------------------------------Newspapaer
+---------------------------------------------------------n
 
 https://www.firstpost.com/
 
